@@ -1,0 +1,117 @@
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+    background: transparent;
+    font-family: inherit;
+  }
+  a {
+    text-decoration: none;
+  }
+  
+  a img {
+    border: none;
+  }
+  
+  button,
+  a {
+    cursor: pointer;
+    color: inherit;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  button,
+  textarea,
+  select {
+    appearance: none !important;
+    border-radius: 0;
+  }
+  /* end of CSS reset */
+
+body {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: #f2f2f2;
+}
+
+body > h1 {
+    margin-top: 150px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 36px; /* 24px < 520px */
+    text-transform: uppercase;
+    color: #006837;
+}
+
+.text {
+    max-width: 520px; /* 100vh < 520px */
+    height: fit-content;
+    margin: 10px 0;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5rem;
+    color: #467745;
+    background-color: #f9c582;
+}
+
+.question {
+    font-weight: 300;
+    font-style: italic;
+}
+
+.text > input {
+    max-width: 480px; /* 100%-40px < 520px --> margin-left: 20px*/
+    width: 100%;
+    height: 64px;
+    margin-top: 20px;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #98a991;
+    background-color: #ffffff;
+}
+
+body > button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 120px;
+    height: 120px;
+    margin: 20px;
+    border-radius: 50%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 21px;
+    color: #006837;
+    background-color: #f9c582;
+}
+
+/* style when the viewport is smaller than 520px */
+@media screen and (max-width: 520px) {
+
+    body > h1 {
+        font-size: 24px;
+    }
+
+    .text {
+        width: 100vw;
+    }
+/* 
+    .text > input {
+        width: calc(100% - 40px);
+    }
+*/    
+}
